@@ -16,28 +16,17 @@ Page {
         id: label
         color: "#d8d7df"
         text: qsTr("Autreo Plus")
+        styleColor: "#00000000"
         font.pixelSize: Qt.application.font.pixelSize * 2
         padding: 10
+    }
 
-        Image {
-            id: image1
-            x: 0
-            y: 0
-            width: 320
-            height: 487
-            fillMode: Image.PreserveAspectCrop
-            opacity: 0.1
-            source: "../../../../lr_rm_bonitasprings_blue_7pc_tx_Bonita-Springs-Blue-5-Pc-Living-Room.jpeg"
-
-            Rectangle {
-                id: rectangle1
-                x: 0
-                y: 0
-                width: 320
-                height: 51
-                color: "#aaaaff"
-            }
-        }
+    Image {
+        id: image
+        opacity: 0.2
+        fillMode: Image.PreserveAspectCrop
+        anchors.fill: parent
+        source: "../../../../lr_rm_bonitasprings_blue_7pc_tx_Bonita-Springs-Blue-5-Pc-Living-Room.jpeg"
     }
 
     RoundButton {
