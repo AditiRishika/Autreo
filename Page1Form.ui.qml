@@ -6,12 +6,38 @@ Page {
     id: page
     width: 320
     height: 480
+    opacity: 1
+    focusPolicy: Qt.ClickFocus
+    font.family: "Verdana"
+    font.strikeout: false
+    font.bold: false
 
     header: Label {
         id: label
-        text: qsTranslate("", "AAPP :D")
+        color: "#d8d7df"
+        text: qsTr("Autreo Plus")
         font.pixelSize: Qt.application.font.pixelSize * 2
         padding: 10
+
+        Image {
+            id: image1
+            x: 0
+            y: 0
+            width: 320
+            height: 487
+            fillMode: Image.PreserveAspectCrop
+            opacity: 0.1
+            source: "../../../../lr_rm_bonitasprings_blue_7pc_tx_Bonita-Springs-Blue-5-Pc-Living-Room.jpeg"
+
+            Rectangle {
+                id: rectangle1
+                x: 0
+                y: 0
+                width: 320
+                height: 51
+                color: "#aaaaff"
+            }
+        }
     }
 
     RoundButton {
@@ -28,9 +54,9 @@ Page {
         x: 71
         y: 14
         width: 151
-        height: 48
+        height: 40
         text: qsTranslate("", "LIVING ROOM")
-        anchors.bottomMargin: -8
+        anchors.bottomMargin: 0
         anchors.bottom: roundButton.bottom
     }
 
@@ -62,7 +88,7 @@ Page {
             height: 301
             rows: 3
             flow: GridLayout.TopToBottom
-            columns: 0
+            columns: 1
             anchors.right: parent.right
             anchors.rightMargin: -12
             anchors.bottom: parent.bottom
@@ -74,49 +100,32 @@ Page {
 
             Button {
                 id: button1
-                text: qsTr("Button")
+                text: qsTr("DOOR Light")
                 Layout.fillHeight: true
                 Layout.fillWidth: true
             }
 
             Button {
                 id: button2
-                text: qsTr("Button")
+                text: qsTr("room light")
                 Layout.fillHeight: true
                 Layout.fillWidth: true
             }
 
             Button {
                 id: button3
-                text: qsTr("Button")
+                text: qsTr("room socket")
                 Layout.fillHeight: true
                 Layout.fillWidth: true
             }
 
             Button {
                 id: button4
-                text: qsTr("Button")
+                text: qsTr("YeeLight")
                 Layout.rowSpan: 3
                 Layout.fillHeight: true
                 Layout.fillWidth: true
             }
         }
-    }
-
-    Image {
-        id: image
-        x: 228
-        y: 6
-        width: 54
-        height: 48
-        anchors.bottomMargin: -18
-        anchors.rightMargin: -20
-        anchors.right: frame.right
-        anchors.bottom: textArea.bottom
-        anchors.left: textArea.right
-        anchors.leftMargin: 6
-        anchors.topMargin: 0
-        anchors.top: textArea.top
-        source: "../../../Downloads/MJ/LIVING.JPG"
     }
 }
