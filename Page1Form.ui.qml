@@ -51,12 +51,7 @@ Page {
 
     Frame {
         id: frame
-        x: 38
-        y: 93
-        width: 236
-        height: 301
-        anchors.horizontalCenterOffset: 0
-        anchors.horizontalCenter: parent.horizontalCenter
+        anchors.fill: parent
 
         Rectangle {
             id: rectangle
