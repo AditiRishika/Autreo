@@ -6,6 +6,7 @@ Page {
     id: page
     width: 320
     height: 480
+    property alias roomLight: roomLight
     opacity: 1
     focusPolicy: Qt.ClickFocus
     font.family: "Verdana"
@@ -90,7 +91,7 @@ Page {
             }
 
             Button {
-                id: button2
+                id: roomLight
                 text: qsTr("room light")
                 Layout.fillHeight: true
                 Layout.fillWidth: true
